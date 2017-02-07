@@ -24,27 +24,32 @@ Clone this repository and open the project in Xcode.  Once you have done that, f
 
 __Code that will start the stopwatch:__
 
-  print("Starting stopwatch...")
-  Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
-  stopwatch.start()
+```swift
+print("Starting stopwatch...")
+Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
+stopwatch.start()
+```
 
 __Code to stop the stopwatch:__
-
-  print(stopwatch.elapsedTime)
-  stopwatch.stop()
+```swift
+print(stopwatch.elapsedTime)
+stopwatch.stop()
+```
 
 __Code to dismiss the AddTimeViewController screen when you press cancel:__
-
-  dismiss(animated: true, completion: nil)
+```swift
+dismiss(animated: true, completion: nil)
+```
 
 __Code to show a popup when you "save" the time on the AddTimeViewController:__
-
-  let alertController = UIAlertController(title: "Time Saved!", message: "You just fake saved the time " + timeLabel.text! + "!", preferredStyle: .alert)
+```swift
+let alertController = UIAlertController(title: "Time Saved!", message: "You just fake saved the time " + timeLabel.text! + "!", preferredStyle: .alert)
         
-  let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-  alertController.addAction(defaultAction)
+let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+alertController.addAction(defaultAction)
         
-  present(alertController, animated: true, completion: nil)
+present(alertController, animated: true, completion: nil)
+```
 
 
 
