@@ -55,7 +55,7 @@ __Code that will start the stopwatch:__
 
 ```swift
 print("Starting stopwatch...")
-Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
+Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(HomeViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
 stopwatch.start()
 ```
 

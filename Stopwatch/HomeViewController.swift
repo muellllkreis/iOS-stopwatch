@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         // NOTE: You'll need to click on the seque you create and give it the name "AddTime" for this to work!
         if (segue.identifier == "AddTime") {
             let destinationVC = segue.destination as! UINavigationController
-            let targetController = destinationVC.topViewController as! AddTimeViewController
+            // let targetController = destinationVC.topViewController as! AddTimeViewController
             
             // ADD CODE: Get the data ready to send over to the next controller by setting the fields over in the AddTimeViewController
             
