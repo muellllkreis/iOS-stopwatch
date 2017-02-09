@@ -17,14 +17,22 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAl
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
-    // ADD CODE: Add the IBOutlet for the time label here.
+    // ACTION REQUIRED: You need to hook up this IBOutlet to the label in the storyboard for HomeViewController
+    // Note: the 'open' circle in the left margin will be filled in once the connection is made
+    @IBOutlet weak var elapsedTimeLabel: UILabel!
     
     let stopwatch = Stopwatch()
     
-    // ADD CODE: Here, you should add functions for the start button, stop button, and the + sign you need to add once you embed the scene in a Navigation Controller
+    // ACTION REQUIRED: You need to hook up the start & stop buttons in 'HomeViewController' to these functions
+    @IBAction func startTimer(sender: UIButton) {
+        print("start called")
+    }
     
+    @IBAction func stopTimer(sender: UIButton) {
+        print("stop called")
+    }
     
     
     // This function gets data ready to be sent over to another scene.  Notice how we get the navigation controller first, then get the view controller embedded inside it.
@@ -35,7 +43,7 @@ class ViewController: UIViewController {
         // NOTE: You'll need to click on the seque you create and give it the name "AddTime" for this to work!
         if (segue.identifier == "AddTime") {
             let destinationVC = segue.destination as! UINavigationController
-            let targetController = destinationVC.topViewController as! AddTimeViewController
+            // let targetController = destinationVC.topViewController as! AddTimeViewController
             
             // ADD CODE: Get the data ready to send over to the next controller by setting the fields over in the AddTimeViewController
             
