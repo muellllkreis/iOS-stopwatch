@@ -33,7 +33,7 @@ CHECK: At this point, you should be able to run the app and the stopwatch functi
 6. Then select this new view controller (by clicking the little yellow circle on the top) and change its class to AddTimeViewController in the identity inspector (top right panel, id card icon).
 7. Next, embed this 'AddTimeViewController' in a navigation controller by selecting it in the Storyboard (again, by clicking the little yellow circle on the top), then clicking 'Editor' in the top menu bar > Embed In > Navigation Controller.
 
-## Connecting the Two Scenese Together (Checkpoint 3)
+## Connecting the Two Scenes Together (Checkpoint 3)
 
 1. Now we wish to launch our AddTimeViewController in response to a button click in the HomeViewController. In the Storyboard, drag a bar button item from the Object Library onto the top right corner of the navigation bar in the HomeViewController that was created for you. 
 2. Initially, the bar button item will be a simple button that says 'item'. Cick on it, and in the Attribute Inspector (top-right panel), select 'Add' from the System Item dropdown. The button should change to a plus.
@@ -46,8 +46,9 @@ CHECK: At this point, you should be able to run the app, and clicking the '+' bu
 Finally, it's up to you to build out the 'AddTimeViewController' to exhibit the following functionality:
 
 1. It should have a label in the middle that it prepopulated with the current value of the elapsedTimeLabel in the 'HomeViewController' when the 'AddTimeViewController is launched' (note: this label's value will be static, it won't update like the elapsedTimeLabel)
-2. It should have a 'cancel' bar button item in top left that dismisses the 'AddTimeViewController'
-3. It should have a 'save' button somewhere, which, when pressed, presents an alert saying that you just 'fake' saved the time. In the alert message, you should mention the value in the label
+2. It should have a 'cancel' bar button item in top left that dismisses the 'AddTimeViewController'.
+3. It should have a 'save' button somewhere, which, when pressed, presents an alert saying that you just 'fake' saved the time. In the alert message, you should mention the value in the label.
+4. To pass the time from the 'HomeViewController' to the 'AddTimeViewController', you will need to edit the code found in the 'prepare()' function in 'HomeViewController'.  Here, uncomment the line that creates the 'targetController'.  In the 'AddTimeViewController', add a field called 'elapsedTime' as a 'String' with an initial blank value.  Back in the 'prepare()' function, add a line of code that will set the 'elapsedTime' value in the 'targetController' with the value of the time label in the 'HomeViewController'.  In 'onViewDidLoad()' in the 'AddTimeViewController', you can now set the label text based on the value of 'elapsedTime'.
 
 ## Submit
 
