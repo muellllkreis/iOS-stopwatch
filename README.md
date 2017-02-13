@@ -49,6 +49,10 @@ Finally, it's up to you to build out the 'AddTimeViewController' to exhibit the 
 2. It should have a 'cancel' bar button item in top left that dismisses the 'AddTimeViewController'
 3. It should have a 'save' button somewhere, which, when pressed, presents an alert saying that you just 'fake' saved the time. In the alert message, you should mention the value in the label
 
+## Submit
+
+When the lab is over, zip up your project directory and upload whatever you have finished to the assignment submission in Collab.  If you worked with someone, both of you should up load the same zip file and just mention the other person (and computing ID) in the submission comments.
+
 ## Code Snippits
 
 __Code that will start the stopwatch:__
