@@ -4,6 +4,10 @@
 
 Clone this repository and open the project in Xcode.  Once you have done that, follow the instructions in the code to fill out the functionality of this stopwatch app.
 
+## Edit the Bundle Identifier
+
+You may have issues signing the the project or problems with the provisioning profile.  The easiest thing to do is to edit your Bundle Identifier on the project information page under Settings (click on the root of your project in the left project explorer - the blue icon at the top).  Just add a dot and your computing ID to the end, so it looks like `edu.virginia.cs.cs4720.Note-Taker.compid` and it should work.
+
 ## Steps to Follow
 
 1. You should start by reading through the HomeViewController code, paying close attention to the comments. Then you should take a look at the Main.storyboard file.
