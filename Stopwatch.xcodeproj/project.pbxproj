@@ -13,6 +13,7 @@
 		721A87671AE4B75C003DBFC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721A87661AE4B75C003DBFC4 /* Images.xcassets */; };
 		721A876A1AE4B75C003DBFC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721A87681AE4B75C003DBFC4 /* LaunchScreen.xib */; };
 		721A87761AE4B75C003DBFC4 /* StopwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721A87751AE4B75C003DBFC4 /* StopwatchTests.swift */; };
+		7728B8461F6B1AC000F04402 /* AddTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7728B8451F6B1AC000F04402 /* AddTimeViewController.swift */; };
 		F96EB9291B0554D90063321A /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96EB9281B0554D90063321A /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		721A876F1AE4B75C003DBFC4 /* StopwatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopwatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		721A87741AE4B75C003DBFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		721A87751AE4B75C003DBFC4 /* StopwatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTests.swift; sourceTree = "<group>"; };
+		7728B8451F6B1AC000F04402 /* AddTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimeViewController.swift; sourceTree = "<group>"; };
 		F96EB9281B0554D90063321A /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				721A87661AE4B75C003DBFC4 /* Images.xcassets */,
 				721A87681AE4B75C003DBFC4 /* LaunchScreen.xib */,
 				721A875D1AE4B75B003DBFC4 /* Supporting Files */,
+				7728B8451F6B1AC000F04402 /* AddTimeViewController.swift */,
 			);
 			path = Stopwatch;
 			sourceTree = "<group>";
@@ -160,7 +163,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Your School";
 				TargetAttributes = {
 					721A87591AE4B75B003DBFC4 = {
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96EB9291B0554D90063321A /* Stopwatch.swift in Sources */,
+				7728B8461F6B1AC000F04402 /* AddTimeViewController.swift in Sources */,
 				721A87601AE4B75B003DBFC4 /* AppDelegate.swift in Sources */,
 				02E65AFE1E4E168C004FB594 /* HomeViewController.swift in Sources */,
 			);
@@ -275,8 +279,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -321,8 +327,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -341,6 +349,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -353,7 +362,7 @@
 				INFOPLIST_FILE = Stopwatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.yourschool.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.yourschool.Stopwatch.mjr9r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -366,7 +375,7 @@
 				INFOPLIST_FILE = Stopwatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.yourschool.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.yourschool.Stopwatch.mjr9r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

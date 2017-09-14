@@ -28,10 +28,15 @@ class HomeViewController: UIViewController {
     // ACTION REQUIRED: You need to hook up the start & stop buttons in 'HomeViewController' to these functions
     @IBAction func startTimer(sender: UIButton) {
         print("start called")
+        print("Starting stopwatch...")
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(HomeViewController.updateElapsedTimeLabel(_:)), userInfo: nil, repeats: true)
+        stopwatch.start()
     }
     
     @IBAction func stopTimer(sender: UIButton) {
         print("stop called")
+        print(stopwatch.elapsedTime)
+        stopwatch.stop()
     }
     
     
@@ -43,7 +48,9 @@ class HomeViewController: UIViewController {
         // NOTE: You'll need to click on the seque you create and give it the name "AddTime" for this to work!
         if (segue.identifier == "AddTime") {
             let destinationVC = segue.destination as! UINavigationController
-            // let targetController = destinationVC.topViewController as! AddTimeViewController
+             let targetController = destinationVC.topViewController as! AddTimeViewController
+            
+            targetController.time = elapsedTimeLabel.text!
             
             // ADD CODE: Get the data ready to send over to the next controller by setting the fields over in the AddTimeViewController
             
